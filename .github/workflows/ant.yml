@@ -5,11 +5,11 @@ name: Java CI
 
 on:
   push:
-    branches: [ master ]
+#    branches: [ master ]
   schedule:
     - cron: '40 13 * * *'
-  pull_request:
-    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
 
 jobs:
   build:
