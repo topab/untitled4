@@ -4,10 +4,11 @@
 name: Java CI
 
 on:
-  push:
+#  push:
 #    branches: [ master ]
+  workflow_dispatch:
   schedule:
-    - cron: '55 05 * * *'
+    - cron: '05 06 * * *'
 #  pull_request:
 #    branches: [ master ]
 
