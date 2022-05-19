@@ -22,7 +22,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Java Version
-      run: java Main
+      run: java -version
+           java -version
     - name: Java Version
       run: javac src/Main.java
     - name: Build Java
