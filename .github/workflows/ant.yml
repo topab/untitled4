@@ -23,9 +23,8 @@ jobs:
         distribution: 'temurin'
     - name: Java Version
       run: java -version
-    - name: Java Version
-      run: javac src/Main.java
     - name: Run Java
       run: |
+           javac src/Main.java
            cd src 
            java Main
