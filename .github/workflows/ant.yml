@@ -25,6 +25,8 @@ jobs:
       run: ls
     - name: cd folder
       run: cd src
+    - name: Java Version
+      run: ls
     - name: Build Java
       run: javac Main.java
     - name: Run Java
