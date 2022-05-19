@@ -21,7 +21,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Build with Ant
+    - name: Java Version
       run: java -version
-    - name: 进入src
-      run: ls
+    - name: Build Java
+      run: javac src/Main.java
+    - name: Run Java
+      run: java src/Main
