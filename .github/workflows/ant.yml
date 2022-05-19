@@ -23,3 +23,5 @@ jobs:
         distribution: 'temurin'
     - name: Build with Ant
       run: java -version
+    - name: 进入src
+      run: ls
