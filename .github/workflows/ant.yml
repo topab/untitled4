@@ -26,5 +26,6 @@ jobs:
     - name: Java Version
       run: javac src/Main.java
     - name: Run Java
-      run: cd src 
+      run: |
+           cd src 
            java Main
