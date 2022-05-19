@@ -1,13 +1,17 @@
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        String content=getHttp("https://api.sdccx.cn");
+        String content = getHttp("https://api.sdccx.cn");
         System.out.println(content);
+        createFile();
     }
 
     public static String getHttp(String get_url) {
@@ -35,5 +39,21 @@ public class Main {
             e.printStackTrace();
         }
         return "";
+    }
+
+    static void createFile() {
+        try {
+            File file = new File("./src/file/"+getNowTime()+".txt");
+            if (file.createNewFile())
+                System.out.println("文件创建成功！");
+            else
+                System.out.println("出错了，该文件已经存在。");
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+    public static String getNowTime() {
+        java.text.SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss");
+        return format.format(new Date());
     }
 }
