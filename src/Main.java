@@ -42,8 +42,12 @@ public class Main {
     }
 
     static void createFile() {
+        File file2 = new File("./src/file/");
+        if (!file2.exists()) {
+            file2.mkdirs();
+        }
         try {
-            File file = new File("./src/file/"+getNowTime()+".txt");
+            File file = new File("./src/file/" + getNowTime() + ".txt");
             if (file.createNewFile())
                 System.out.println("文件创建成功！");
             else
@@ -52,6 +56,7 @@ public class Main {
             ioe.printStackTrace();
         }
     }
+
     public static String getNowTime() {
         java.text.SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss");
         return format.format(new Date());
