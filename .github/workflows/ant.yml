@@ -6,9 +6,9 @@ name: Java CI
 on:
 #  push:
 #    branches: [ master ]
-  workflow_dispatch:
+#  workflow_dispatch:
   schedule:
-    - cron: '05 06 * * *'
+    - cron: '20 06 * * *'
 #  pull_request:
 #    branches: [ master ]
 
@@ -24,6 +24,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    # 设置服务器时区为东八区
+    - name: Set time zone
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: Java Version
       run: java -version
     - name: Run Java
