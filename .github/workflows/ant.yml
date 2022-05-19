@@ -29,13 +29,13 @@ jobs:
            cd src 
            java Main
     - name: Commit files
-        run: |
+      run: |
           git config --local user.email "1402609439@qq.com"
           git config --local user.name "XiaoMing"
           git add .
           git commit -m "`date '+%Y-%m-%d %H:%M:%S'`"
     - name: Push changes
-     uses: ad-m/github-push-action@master
-     with:
-     github_token: ${{ secrets.TOKEN }}
-     branch: ${{ github.ref }}
+      uses: ad-m/github-push-action@master
+      with:
+      github_token: ${{ secrets.TOKEN }}
+      branch: ${{ github.ref }}
