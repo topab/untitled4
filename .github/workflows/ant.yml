@@ -22,11 +22,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Java Version
-      run: ls
-    - name: cd folder
-      run: cd src
+      run: java Main
     - name: Java Version
-      run: ls
+      run: javac src/Main.java
     - name: Build Java
       run: javac Main.java
     - name: Run Java
