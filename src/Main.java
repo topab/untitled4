@@ -1,3 +1,7 @@
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,9 +13,36 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        String content = getHttp("https://api.sdccx.cn");
-        System.out.println(content);
-        createFile();
+//        String content = getHttp("https://");
+//        System.out.println(content);
+//        createFile();
+//        try {
+//            Document document = Jsoup.connect("http://wsjkw.cq.gov.cn/zwgk_242/zxgk/").get();
+//            Elements elements = document.getElementsByClass("gl-list2");
+//            for (int i = 0; i < elements.size(); i++) {
+//                Elements elements1 = elements.get(i).getElementsByTag("li");
+//                for (int j = 0; j < elements1.size(); j++) {
+//                    String href=elements1.get(j).selectFirst("a").attr("href");
+//                    String title=elements1.get(j).selectFirst("a").text();
+//                    String time=elements1.get(j).selectFirst("span").text();
+//                    System.out.println(title+"   ---   "+time+"   -->   "+href);
+//                }
+//            }
+//        } catch (Exception e) {
+//
+//        }
+
+        try {
+//            Document document = Jsoup.connect("https://mp.weixin.qq.com/s/m0pOXHLco-2IJa8xPWYDxw").get();
+//            String wxStr=document.getElementById("page-content").html();
+//            System.out.println(wxStr);
+        }catch (Exception e){
+
+        }
+
+
+
+
     }
 
     public static String getHttp(String get_url) {
