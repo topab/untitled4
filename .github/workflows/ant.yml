@@ -6,7 +6,7 @@ name: Java CI
 on:
 #  push:
 #    branches: [ master ]
-#  workflow_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '20 06 * * *'
 #  pull_request:
